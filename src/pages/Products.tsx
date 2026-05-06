@@ -57,7 +57,7 @@ const Products = () => {
 
       <section className="section-padding" style={{ background: 'var(--bg-surface)', paddingTop: '180px', borderBottom: '1px solid var(--border-main)' }}>
         <div className="container text-center">
-          <h1 style={{ fontSize: '4rem', marginBottom: '1.5rem', fontWeight: '800' }}>The WebCultivation <span style={{ color: 'var(--primary-blue)' }}>Ecosystem</span></h1>
+          <h1 style={{ fontSize: '4rem', marginBottom: '1.5rem', fontWeight: '800' }}>The WebCultivation <span style={{ color: 'var(--primary)' }}>Ecosystem</span></h1>
           <p style={{ color: 'var(--text-muted)', fontSize: '1.3rem', maxWidth: '700px', margin: '0 auto' }}>
             Proprietary software solutions built to solve real-world business challenges.
           </p>

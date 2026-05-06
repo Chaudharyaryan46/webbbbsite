@@ -16,10 +16,10 @@ const About = () => {
         <div className="container">
           <div className="flex flex-col md-flex items-center gap-16">
             <div style={{ flex: 1 }}>
-              <div className="animate-fade" style={{ color: 'var(--primary-blue)', fontWeight: '700', marginBottom: '1rem', letterSpacing: '0.2em', textTransform: 'uppercase', fontSize: '0.9rem' }}>
+              <div className="animate-fade" style={{ color: 'var(--primary)', fontWeight: '700', marginBottom: '1rem', letterSpacing: '0.2em', textTransform: 'uppercase', fontSize: '0.9rem' }}>
                 OUR MISSION
               </div>
-              <h1 style={{ fontSize: '4rem', marginBottom: '1.5rem', fontWeight: '800' }}>Bridging the gap between <span style={{ color: 'var(--primary-blue)' }}>Tech</span> & Growth.</h1>
+              <h1 style={{ fontSize: '4rem', marginBottom: '1.5rem', fontWeight: '800' }}>Bridging the gap between <span style={{ color: 'var(--primary)' }}>Tech</span> & Growth.</h1>
               <p style={{ color: 'var(--text-muted)', fontSize: '1.3rem', lineHeight: '1.6', marginBottom: '2rem' }}>
                 At WebCultivation Technology, we believe in the power of systems. Our mission is to engineer the technical backbone for enterprises worldwide, ensuring they launch smarter and scale faster.
               </p>
@@ -45,7 +45,7 @@ const About = () => {
         <div className="container">
           <div className="grid grid-cols-2 md-grid-cols-4 gap-8 text-center">
             <div>
-              <h2 style={{ fontSize: '3.5rem', color: 'var(--primary-blue)', fontWeight: '800' }}>500+</h2>
+              <h2 style={{ fontSize: '3.5rem', color: 'var(--primary)', fontWeight: '800' }}>500+</h2>
               <p style={{ color: 'var(--text-muted)', fontWeight: '600' }}>Global Clients</p>
             </div>
             <div>
@@ -57,7 +57,7 @@ const About = () => {
               <p style={{ color: 'var(--text-muted)', fontWeight: '600' }}>Countries Served</p>
             </div>
             <div>
-              <h2 style={{ fontSize: '3.5rem', color: 'var(--primary-blue)', fontWeight: '800' }}>24/7</h2>
+              <h2 style={{ fontSize: '3.5rem', color: 'var(--primary)', fontWeight: '800' }}>24/7</h2>
               <p style={{ color: 'var(--text-muted)', fontWeight: '600' }}>Global Support</p>
             </div>
           </div>
@@ -67,10 +67,10 @@ const About = () => {
       {/* DNA */}
       <section className="section-padding">
         <div className="container">
-          <h2 className="text-center" style={{ fontSize: '3rem', marginBottom: '5rem', fontWeight: '800' }}>The WebCultivation <span style={{ color: 'var(--primary-blue)' }}>DNA</span></h2>
+          <h2 className="text-center" style={{ fontSize: '3rem', marginBottom: '5rem', fontWeight: '800' }}>The WebCultivation <span style={{ color: 'var(--primary)' }}>DNA</span></h2>
           <div className="grid grid-cols-1 md-grid-cols-2 gap-12">
             <div className="flex gap-6">
-              <div style={{ minWidth: '56px', height: '56px', borderRadius: '16px', background: 'var(--bg-surface)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary-blue)' }}><Globe size={28} /></div>
+              <div style={{ minWidth: '56px', height: '56px', borderRadius: '16px', background: 'var(--bg-surface)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary)' }}><Globe size={28} /></div>
               <div>
                 <h4 style={{ fontSize: '1.25rem', fontWeight: '700', marginBottom: '0.5rem' }}>Global-First Mindset</h4>
                 <p style={{ color: 'var(--text-muted)' }}>Solutions engineered to compete on the world stage, regardless of where your business is based.</p>

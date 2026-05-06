@@ -47,7 +47,7 @@ const App = () => {
                   tagline="Smart Billing for Smart Restaurants" 
                   description="A comprehensive Restaurant POS system with table management, KOT, CRM, and integrated billing for a seamless dining experience."
                   features={['Table Management & KOT', 'QR Code Digital Menu', 'Integrated Inventory', 'Detailed Sales Analytics']}
-                  color="var(--primary-blue)"
+                  color="var(--primary)"
                   logo={webbillLogo}
                   image={webbillPreview}
                 />

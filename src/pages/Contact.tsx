@@ -14,7 +14,7 @@ const Contact = () => {
       <section className="section-padding" style={{ background: 'var(--bg-surface)', paddingTop: '180px', borderBottom: '1px solid var(--border-main)' }}>
         <div className="container">
           <div className="text-center animate-fade">
-            <h1 style={{ fontSize: '4rem', marginBottom: '1.5rem', fontWeight: '800' }}>Get in <span style={{ color: 'var(--primary-blue)' }}>Touch</span></h1>
+            <h1 style={{ fontSize: '4rem', marginBottom: '1.5rem', fontWeight: '800' }}>Get in <span style={{ color: 'var(--primary)' }}>Touch</span></h1>
             <p style={{ color: 'var(--text-muted)', fontSize: '1.3rem', maxWidth: '700px', margin: '0 auto' }}>
               Ready to transform your business? Our global engineering team is here to build your next big idea.
             </p>
@@ -32,7 +32,7 @@ const Contact = () => {
                 <h2 style={{ fontSize: '2.5rem', marginBottom: '2rem', fontWeight: '800' }}>Global Headquarters</h2>
                 <div className="flex flex-col gap-8">
                   <div className="flex gap-6">
-                    <div style={{ width: '56px', height: '56px', borderRadius: '16px', background: 'var(--bg-surface)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary-blue)', border: '1px solid var(--border-main)' }}>
+                    <div style={{ width: '56px', height: '56px', borderRadius: '16px', background: 'var(--bg-surface)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary)', border: '1px solid var(--border-main)' }}>
                       <MapPin size={28} />
                     </div>
                     <div>
@@ -41,7 +41,7 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="flex gap-6">
-                    <div style={{ width: '56px', height: '56px', borderRadius: '16px', background: 'var(--bg-surface)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary-blue)', border: '1px solid var(--border-main)' }}>
+                    <div style={{ width: '56px', height: '56px', borderRadius: '16px', background: 'var(--bg-surface)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary)', border: '1px solid var(--border-main)' }}>
                       <Mail size={28} />
                     </div>
                     <div>
@@ -50,7 +50,7 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="flex gap-6">
-                    <div style={{ width: '56px', height: '56px', borderRadius: '16px', background: 'var(--bg-surface)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary-blue)', border: '1px solid var(--border-main)' }}>
+                    <div style={{ width: '56px', height: '56px', borderRadius: '16px', background: 'var(--bg-surface)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary)', border: '1px solid var(--border-main)' }}>
                       <Phone size={28} />
                     </div>
                     <div>
