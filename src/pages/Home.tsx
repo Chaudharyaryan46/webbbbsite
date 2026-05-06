@@ -9,7 +9,7 @@ import webmartLogo from '../assets/logos/webmart.png';
 import webinvoiceLogo from '../assets/logos/webinvoice.png';
 import jatasaiLogo from '../assets/logos/jatasai.png';
 import googleReviewsBadge from '../assets/photos/google_reviews_badge.png';
-import globalTeamIllustration from '../assets/photos/global_team_illustration.png';
+import globalBusinessMap from '../assets/photos/global_business_map.png';
 
 const Home = () => {
   const schema = {
@@ -45,51 +45,68 @@ const Home = () => {
       {/* ── HERO ── */}
       <section style={{ background: 'var(--bg-soft)', paddingTop: '160px', paddingBottom: '100px', borderBottom: '1px solid var(--border)' }}>
         <div className="container">
-          <div style={{ textAlign: 'center' }} className="animate-fade">
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
-              <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#16A34A' }}></div>
-              <span style={{ fontSize: '0.85rem', fontWeight: '700', color: 'var(--text-muted)', letterSpacing: '0.05em' }}>
-                Gujarat, India — Serving 15+ Countries
-              </span>
-            </div>
-            <h1 style={{ fontSize: '4rem', marginBottom: '1.5rem', lineHeight: '1.1' }}>
-              Engineering <span className="text-gradient">Business</span><br />Infrastructure
-            </h1>
-            <p style={{ color: 'var(--text-muted)', fontSize: '1.3rem', lineHeight: '1.7', marginBottom: '2.5rem', maxWidth: '800px', margin: '0 auto' }}>
-              We build high-performance software and AI systems that empower global enterprises to operate at scale.
-            </p>
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '3rem' }}>
-              <Link to="/contact" className="btn btn-primary" style={{ padding: '0.8rem 2.5rem' }}>
-                Book Free Demo <ArrowRight size={18} />
-              </Link>
-              <Link to="/contact" className="btn btn-secondary" style={{ padding: '0.8rem 2.5rem' }}>
-                Get Consultation
-              </Link>
-            </div>
+          <div className="row" style={{ alignItems: 'center', gap: '5rem' }}>
 
-            {/* Illustration */}
-            <div style={{ maxWidth: '1000px', margin: '0 auto 4rem', borderRadius: '32px', overflow: 'hidden', boxShadow: 'var(--shadow-lg)' }}>
-              <img src={globalTeamIllustration} alt="Global Team Infrastructure" style={{ width: '100%', height: 'auto', display: 'block' }} />
-            </div>
-
-            {/* GMB Rating Badge */}
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap', marginBottom: '3rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', background: 'white', padding: '0.6rem 1.25rem', borderRadius: '16px', boxShadow: 'var(--shadow-sm)', border: '1px solid var(--border)' }}>
-                <img src={googleReviewsBadge} alt="Google Reviews 5 Star Rating" style={{ height: '48px', width: 'auto' }} />
+            {/* Left Content */}
+            <div style={{ flex: '1.2' }} className="animate-fade">
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
+                <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#16A34A' }}></div>
+                <span style={{ fontSize: '0.85rem', fontWeight: '700', color: 'var(--text-muted)', letterSpacing: '0.05em' }}>
+                  Gujarat, India — Serving 15+ Countries
+                </span>
               </div>
-              <div style={{ color: 'var(--text-muted)', fontSize: '0.95rem', fontWeight: '600' }}>
-                40+ Verified Reviews
+              <h1 style={{ fontSize: '3.75rem', marginBottom: '1.5rem', lineHeight: '1.1' }}>
+                Engineering <span className="text-gradient">Business</span><br />Infrastructure
+              </h1>
+              <p style={{ color: 'var(--text-muted)', fontSize: '1.2rem', lineHeight: '1.7', marginBottom: '2.5rem', maxWidth: '540px' }}>
+                We build high-performance software and AI systems that empower global enterprises to operate at scale.
+              </p>
+              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                <Link to="/contact" className="btn btn-primary" style={{ fontSize: '1rem', padding: '0.8rem 2rem' }}>
+                  Book Free Demo <ArrowRight size={18} />
+                </Link>
+                <Link to="/contact" className="btn btn-secondary" style={{ fontSize: '1rem', padding: '0.8rem 2rem' }}>
+                  Get Consultation
+                </Link>
               </div>
-            </div>
 
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '3rem', flexWrap: 'wrap' }}>
-              {[['500+', 'Global Clients'], ['15+', 'Countries'], ['4', 'Products']].map(([n, l]) => (
-                <div key={l}>
-                  <div style={{ fontSize: '2rem', fontWeight: '900', color: 'var(--primary)' }}>{n}</div>
-                  <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: '700' }}>{l}</div>
+              {/* GMB Rating Badge */}
+              <div style={{ marginTop: '2.5rem', display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', background: 'white', padding: '0.5rem 1rem', borderRadius: '16px', boxShadow: 'var(--shadow-sm)', border: '1px solid var(--border)' }}>
+                  <img src={googleReviewsBadge} alt="Google Reviews 5 Star Rating" style={{ height: '48px', width: 'auto' }} />
                 </div>
-              ))}
+                <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem', fontWeight: '600' }}>
+                  40+ Verified Reviews
+                </div>
+              </div>
             </div>
+
+            {/* Right Content - The New Global Map Image */}
+            <div style={{ flex: '1', position: 'relative' }}>
+              <div style={{
+                borderRadius: '32px',
+                overflow: 'hidden',
+                boxShadow: 'var(--shadow-xl)',
+                border: '1px solid var(--border)',
+                lineHeight: 0,
+                background: '#fff'
+              }}>
+                <img src={globalBusinessMap} alt="Global Business Transformation Map" style={{ width: '100%', height: 'auto', display: 'block' }} />
+              </div>
+              {/* Floating success badge */}
+              <div style={{
+                position: 'absolute', bottom: '24px', right: '-20px',
+                background: 'var(--primary)', color: '#fff',
+                padding: '0.75rem 1.25rem', borderRadius: '14px',
+                fontWeight: '700', fontSize: '0.85rem',
+                boxShadow: 'var(--shadow-lg)', display: 'flex', alignItems: 'center', gap: '0.5rem',
+                zIndex: 2
+              }}>
+                <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#4ADE80', animation: 'fadeIn 1.5s ease infinite alternate' }}></div>
+                Serving 15+ Nations
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
