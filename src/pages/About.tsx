@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Globe, Users, CheckCircle } from 'lucide-react';
-import successMeme from '../assets/photos/software_success_meme.png';
 
 const About = () => {
   return (
@@ -11,63 +10,27 @@ const About = () => {
         <meta name="description" content="Learn about WebCultivation Technology's mission to bridge the gap between complex technology and business growth worldwide." />
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="section" style={{ background: 'var(--bg-soft)', paddingTop: '180px', borderBottom: '1px solid var(--border)' }}>
+      {/* Centered Hero Section */}
+      <section className="section" style={{ background: 'var(--bg-soft)', paddingTop: '220px', paddingBottom: '120px', borderBottom: '1px solid var(--border)' }}>
         <div className="container">
-          <div className="row" style={{ alignItems: 'center', gap: '5rem' }}>
-            <div style={{ flex: 1.2 }}>
-              <div className="animate-fade" style={{ color: 'var(--primary)', fontWeight: '700', marginBottom: '1rem', letterSpacing: '0.2em', textTransform: 'uppercase', fontSize: '0.9rem' }}>
-                THE MISSION
-              </div>
-              <h1 style={{ fontSize: '3.75rem', marginBottom: '1.5rem', fontWeight: '900' }}>
-                Bridging the Gap between <span className="text-gradient">Tech & Growth</span>.
-              </h1>
-              <p style={{ color: 'var(--text-muted)', fontSize: '1.25rem', lineHeight: '1.7', marginBottom: '2.5rem' }}>
-                At WebCultivation Technology, we believe in the power of systems. Our mission is to engineer the technical backbone for enterprises worldwide, ensuring they launch smarter and scale faster.
-              </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                    <CheckCircle size={24} style={{ color: 'var(--accent-green)' }} />
-                    <span style={{ fontWeight: '600', color: 'var(--text)' }}>Engineered for Global Scale</span>
-                 </div>
-                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                    <CheckCircle size={24} style={{ color: 'var(--accent-green)' }} />
-                    <span style={{ fontWeight: '600', color: 'var(--text)' }}>Systems that never sleep</span>
-                 </div>
-              </div>
+          <div className="text-center animate-fade">
+            <div style={{ color: 'var(--primary)', fontWeight: '800', marginBottom: '1.5rem', letterSpacing: '0.3em', textTransform: 'uppercase', fontSize: '1rem' }}>
+              THE MISSION
             </div>
-            
-            <div style={{ flex: 1, position: 'relative' }}>
-               <div style={{ 
-                 width: '100%', 
-                 borderRadius: '40px', 
-                 overflow: 'hidden', 
-                 boxShadow: 'var(--shadow-xl)',
-                 border: '8px solid white',
-                 transform: 'rotate(2deg)',
-                 transition: 'transform 0.3s ease'
-               }}
-               onMouseEnter={(e) => e.currentTarget.style.transform = 'rotate(0deg)'}
-               onMouseLeave={(e) => e.currentTarget.style.transform = 'rotate(2deg)'}
-               >
-                 <img src={successMeme} alt="Mission Accomplished" style={{ width: '100%', height: 'auto', display: 'block' }} />
+            <h1 style={{ fontSize: '4.5rem', marginBottom: '2rem', fontWeight: '900', lineHeight: '1.1' }}>
+              Bridging the Gap between <br /><span className="text-gradient">Tech & Growth</span>.
+            </h1>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1.5rem', lineHeight: '1.7', marginBottom: '3.5rem', maxWidth: '800px', margin: '0 auto 3.5rem' }}>
+              At WebCultivation Technology, we believe in the power of systems. Our mission is to engineer the technical backbone for enterprises worldwide, ensuring they launch smarter and scale faster.
+            </p>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '3rem', flexWrap: 'wrap' }}>
+               <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                  <CheckCircle size={28} style={{ color: 'var(--accent-green)' }} />
+                  <span style={{ fontWeight: '700', fontSize: '1.1rem', color: 'var(--text)' }}>Engineered for Global Scale</span>
                </div>
-               {/* Meme-style floating badge */}
-               <div style={{
-                 position: 'absolute',
-                 bottom: '-20px',
-                 right: '-20px',
-                 background: 'var(--primary)',
-                 color: 'white',
-                 padding: '1rem 2rem',
-                 borderRadius: '20px',
-                 fontWeight: '900',
-                 fontSize: '1.2rem',
-                 boxShadow: 'var(--shadow-lg)',
-                 transform: 'rotate(-5deg)',
-                 zIndex: 2
-               }}>
-                 POV: It just works. 🚀
+               <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                  <CheckCircle size={28} style={{ color: 'var(--accent-green)' }} />
+                  <span style={{ fontWeight: '700', fontSize: '1.1rem', color: 'var(--text)' }}>Systems that never sleep</span>
                </div>
             </div>
           </div>
