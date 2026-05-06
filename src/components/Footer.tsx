@@ -6,72 +6,90 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer style={{ background: 'var(--dark-surface)', borderTop: '1px solid var(--dark-border)', paddingTop: '5rem', paddingBottom: '2rem' }}>
+    <footer style={{ background: 'var(--footer-bg)', borderTop: '1px solid var(--footer-border)', paddingTop: '6rem', paddingBottom: '3rem', color: 'var(--footer-text)' }}>
       <div className="container">
-        <div className="grid grid-cols-1 md-grid-cols-2 lg-grid-cols-4 gap-8" style={{ marginBottom: '4rem' }}>
-          <div className="flex flex-col gap-4">
+        <div className="grid grid-cols-1 md-grid-cols-2 lg-grid-cols-4 gap-12" style={{ marginBottom: '4rem' }}>
+          
+          {/* Brand Info */}
+          <div className="flex flex-col gap-6">
             <Link to="/" className="flex items-center gap-3">
-              <div style={{ width: '48px', height: '48px', background: 'var(--gradient-blue)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', color: 'white', fontSize: '1.5rem' }}>W</div>
-              <span style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>WebCultivation</span>
+              <div style={{ width: '48px', height: '48px', background: 'var(--primary)', borderRadius: '14px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: '900', color: 'white', fontSize: '1.75rem', boxShadow: '0 4px 12px rgba(26, 63, 168, 0.4)' }}>W</div>
+              <span style={{ fontSize: '1.6rem', fontWeight: '800', color: 'var(--footer-heading)', letterSpacing: '-0.02em' }}>WebCultivation</span>
             </Link>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-              Your global partner for software, AI, and business transformation.
+            <p style={{ color: 'var(--footer-text)', fontSize: '0.95rem', lineHeight: '1.6', maxWidth: '300px' }}>
+              Your global partner for software engineering, AI automation, and comprehensive business transformation.
             </p>
-            <div className="flex gap-4" style={{ marginTop: '1rem' }}>
-              <a href="#" style={{ color: 'var(--text-muted)' }}><Globe size={20} /></a>
-              <a href="#" style={{ color: 'var(--text-muted)' }}><Mail size={20} /></a>
+            <div className="flex gap-4">
+              <a href="mailto:info@webcultivation.com" className="footer-link" style={{ background: 'var(--footer-border)', p: '0.5rem', borderRadius: '50%', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Mail size={18} /></a>
+              <a href="https://wa.me/918200858112" className="footer-link" style={{ background: 'var(--footer-border)', p: '0.5rem', borderRadius: '50%', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Globe size={18} /></a>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="flex flex-col gap-4">
-            <h4 style={{ color: 'white', marginBottom: '0.5rem' }}>Solutions</h4>
-            <Link to="/products/webbill" style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>WebBill POS</Link>
-            <Link to="/products/webinvoice" style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>WebInvoice</Link>
-            <Link to="/products/webmart" style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>WebMart</Link>
-            <Link to="/products/jatas-ai" style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Jatas AI</Link>
+          {/* Solutions */}
+          <div className="flex flex-col gap-5">
+            <h4 style={{ color: 'var(--footer-heading)', fontSize: '1.1rem', fontWeight: '800', marginBottom: '0.5rem' }}>Solutions</h4>
+            <ul className="flex flex-col gap-3">
+              <li><Link to="/products/webbill" className="footer-link">WebBill POS</Link></li>
+              <li><Link to="/products/webinvoice" className="footer-link">WebInvoice</Link></li>
+              <li><Link to="/products/webmart" className="footer-link">WebMart</Link></li>
+              <li><Link to="/products/jatas-ai" className="footer-link">Jatas AI</Link></li>
+            </ul>
           </div>
 
           {/* Services */}
-          <div className="flex flex-col gap-4">
-            <h4 style={{ color: 'white', marginBottom: '0.5rem' }}>Services</h4>
-            <Link to="/services" style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Web Development</Link>
-            <Link to="/services" style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Digital Marketing</Link>
-            <Link to="/services" style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Business Compliance</Link>
-            <Link to="/services" style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Tax & Accounting</Link>
+          <div className="flex flex-col gap-5">
+            <h4 style={{ color: 'var(--footer-heading)', fontSize: '1.1rem', fontWeight: '800', marginBottom: '0.5rem' }}>Services</h4>
+            <ul className="flex flex-col gap-3">
+              <li><Link to="/services" className="footer-link">Web Development</Link></li>
+              <li><Link to="/services" className="footer-link">Digital Marketing</Link></li>
+              <li><Link to="/services" className="footer-link">Business Compliance</Link></li>
+              <li><Link to="/services" className="footer-link">Tax & Accounting</Link></li>
+            </ul>
           </div>
 
-          {/* Contact Info */}
-          <div className="flex flex-col gap-4">
-            <h4 style={{ color: 'white', marginBottom: '0.5rem' }}>Contact</h4>
-            <div className="flex items-center gap-2" style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-              <Mail size={16} /> info@webcultivation.com
-            </div>
-            <div className="flex items-center gap-2" style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-              <Phone size={16} /> IN: +91 8200858112
-            </div>
-            <div className="flex items-center gap-2" style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-              <Phone size={16} /> US: +1 (347) 960-0694
-            </div>
-            <div className="flex items-start gap-2" style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-              <MapPin size={16} style={{ marginTop: '4px' }} /> Dairy Road, Palanpur, Gujarat - 385001
+          {/* Contact */}
+          <div className="flex flex-col gap-5">
+            <h4 style={{ color: 'var(--footer-heading)', fontSize: '1.1rem', fontWeight: '800', marginBottom: '0.5rem' }}>Contact</h4>
+            <div className="flex flex-col gap-4">
+              <a href="mailto:info@webcultivation.com" className="flex items-center gap-3 footer-link">
+                <Mail size={18} style={{ color: 'var(--primary)' }} /> 
+                <span>info@webcultivation.com</span>
+              </a>
+              <div className="flex items-center gap-3">
+                <Phone size={18} style={{ color: 'var(--primary)' }} /> 
+                <div className="flex flex-col">
+                  <span style={{ fontSize: '0.8rem', opacity: 0.7 }}>India</span>
+                  <a href="tel:+918200858112" className="footer-link" style={{ fontSize: '1rem' }}>+91 8200858112</a>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <Globe size={18} style={{ color: 'var(--primary)' }} /> 
+                <div className="flex flex-col">
+                  <span style={{ fontSize: '0.8rem', opacity: 0.7 }}>USA</span>
+                  <a href="tel:+13479600694" className="footer-link" style={{ fontSize: '1rem' }}>+1 (347) 960-0694</a>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <MapPin size={18} style={{ color: 'var(--primary)', marginTop: '4px' }} /> 
+                <span style={{ lineHeight: '1.5', fontSize: '0.95rem' }}>Dairy Road, Palanpur,<br />Gujarat - 385001</span>
+              </div>
             </div>
           </div>
+
         </div>
 
-        {/* Local SEO Footer Links */}
-        <div style={{ borderTop: '1px solid var(--dark-border)', paddingTop: '2rem', textAlign: 'center' }}>
-          <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem', marginBottom: '1rem' }}>
-            Serving Businesses in: 
-            <Link to="/software-company-in-palanpur" style={{ margin: '0 5px' }}>Palanpur</Link> | 
-            <Link to="/software-company-in-palanpur" style={{ margin: '0 5px' }}>Mehsana</Link> | 
-            <Link to="/software-company-in-palanpur" style={{ margin: '0 5px' }}>Ahmedabad</Link> | 
-            <Link to="/software-company-in-palanpur" style={{ margin: '0 5px' }}>Gandhinagar</Link> | 
-            <Link to="/software-company-in-palanpur" style={{ margin: '0 5px' }}>Surat</Link>
-          </p>
-          <p style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>
-            &copy; {currentYear} WebCultivation Technology. All Rights Reserved.
-          </p>
+        {/* Localized Bottom */}
+        <div style={{ borderTop: '1px solid var(--footer-border)', paddingTop: '2.5rem', marginTop: '2rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem' }}>
+            <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+              {['Palanpur', 'Mehsana', 'Ahmedabad', 'Gandhinagar', 'Surat'].map(city => (
+                <Link key={city} to="/software-company-in-palanpur" className="footer-link" style={{ fontSize: '0.85rem' }}>Software Company in {city}</Link>
+              ))}
+            </div>
+            <div style={{ fontSize: '0.85rem', opacity: 0.6 }}>
+              &copy; {currentYear} WebCultivation Technology. Built for the Global Enterprise.
+            </div>
+          </div>
         </div>
       </div>
     </footer>
