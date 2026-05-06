@@ -9,11 +9,10 @@ const Footer = () => {
     <footer style={{ background: 'var(--dark-surface)', borderTop: '1px solid var(--dark-border)', paddingTop: '5rem', paddingBottom: '2rem' }}>
       <div className="container">
         <div className="grid grid-cols-1 md-grid-cols-2 lg-grid-cols-4 gap-8" style={{ marginBottom: '4rem' }}>
-          {/* Brand Info */}
           <div className="flex flex-col gap-4">
-            <Link to="/" className="flex items-center gap-2">
-              <div style={{ width: '32px', height: '32px', background: 'var(--gradient-blue)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', color: 'white' }}>W</div>
-              <span style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>WebCultivation</span>
+            <Link to="/" className="flex items-center gap-3">
+              <div style={{ width: '48px', height: '48px', background: 'var(--gradient-blue)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', color: 'white', fontSize: '1.5rem' }}>W</div>
+              <span style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>WebCultivation</span>
             </Link>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
               Your global partner for software, AI, and business transformation.

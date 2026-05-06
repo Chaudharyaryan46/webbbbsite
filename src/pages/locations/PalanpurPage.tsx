@@ -66,8 +66,8 @@ const PalanpurPage = () => {
           <div className="grid md-grid-cols-3 gap-8">
             {products.map((p) => (
               <div key={p.name} className="card" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', borderTop: `5px solid ${p.color}` }}>
-                <div style={{ height: '60px', display: 'flex', alignItems: 'center' }}>
-                  <img src={p.logo} alt={p.name} style={{ height: '100%', objectFit: 'contain' }} />
+                <div style={{ height: '80px', display: 'flex', alignItems: 'center', background: '#fff', borderRadius: '12px', padding: '1rem', border: '1px solid var(--border)' }}>
+                  <img src={p.logo} alt={p.name} style={{ height: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} />
                 </div>
                 <h3 style={{ fontSize: '1.5rem', fontWeight: '800' }}>{p.name}</h3>
                 <p style={{ color: 'var(--text-muted)', lineHeight: '1.7', flexGrow: 1 }}>{p.desc}</p>

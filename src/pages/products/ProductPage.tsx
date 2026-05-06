@@ -29,8 +29,8 @@ const ProductPage: React.FC<ProductPageProps> = ({ name, tagline, description, f
             {/* Left: text */}
             <div style={{ flex: '1.1' }} className="animate-fade">
               {logo && (
-                <div style={{ marginBottom: '2.5rem', background: '#fff', padding: '1.5rem', borderRadius: '16px', display: 'inline-block', border: '1px solid var(--border)', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
-                  <img src={logo} alt={`${name} logo`} style={{ height: '65px', objectFit: 'contain' }} />
+                <div style={{ marginBottom: '2.5rem', background: '#ffffff', padding: '1.5rem', borderRadius: '16px', display: 'inline-block', border: '1px solid var(--border)', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
+                  <img src={logo} alt={`${name} logo`} style={{ height: '75px', objectFit: 'contain', mixBlendMode: 'multiply' }} />
                 </div>
               )}
               <div className="label" style={{ color: color, marginBottom: '1rem', fontWeight: '800' }}>{name} Ecosystem</div>

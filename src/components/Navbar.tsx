@@ -41,7 +41,7 @@ const Navbar = () => {
 
           {/* Logo */}
           <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
-            <img src={logoMain} alt="WebCultivation" style={{ height: '48px', width: 'auto' }} />
+            <img src={logoMain} alt="WebCultivation" style={{ height: '64px', width: 'auto' }} />
           </Link>
 
           {/* Desktop Nav */}
