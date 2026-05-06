@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Target, Lightbulb, TrendingUp, Globe, Users, ShieldCheck } from 'lucide-react';
-import teamPhoto from '../assets/photos/team_collaboration.png';
+import { Globe, Users, CheckCircle } from 'lucide-react';
+import successMeme from '../assets/photos/software_success_meme.png';
 
 const About = () => {
   return (
@@ -12,75 +12,104 @@ const About = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="section-padding" style={{ background: 'var(--bg-surface)', paddingTop: '180px', borderBottom: '1px solid var(--border-main)' }}>
+      <section className="section" style={{ background: 'var(--bg-soft)', paddingTop: '180px', borderBottom: '1px solid var(--border)' }}>
         <div className="container">
-          <div className="flex flex-col md-flex items-center gap-16">
-            <div style={{ flex: 1 }}>
+          <div className="row" style={{ alignItems: 'center', gap: '5rem' }}>
+            <div style={{ flex: 1.2 }}>
               <div className="animate-fade" style={{ color: 'var(--primary)', fontWeight: '700', marginBottom: '1rem', letterSpacing: '0.2em', textTransform: 'uppercase', fontSize: '0.9rem' }}>
-                OUR MISSION
+                THE MISSION
               </div>
-              <h1 style={{ fontSize: '4rem', marginBottom: '1.5rem', fontWeight: '800' }}>Bridging the gap between <span style={{ color: 'var(--primary)' }}>Tech</span> & Growth.</h1>
-              <p style={{ color: 'var(--text-muted)', fontSize: '1.3rem', lineHeight: '1.6', marginBottom: '2rem' }}>
+              <h1 style={{ fontSize: '3.75rem', marginBottom: '1.5rem', fontWeight: '900' }}>
+                Bridging the Gap between <span className="text-gradient">Tech & Growth</span>.
+              </h1>
+              <p style={{ color: 'var(--text-muted)', fontSize: '1.25rem', lineHeight: '1.7', marginBottom: '2.5rem' }}>
                 At WebCultivation Technology, we believe in the power of systems. Our mission is to engineer the technical backbone for enterprises worldwide, ensuring they launch smarter and scale faster.
               </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                    <CheckCircle size={24} style={{ color: 'var(--accent-green)' }} />
+                    <span style={{ fontWeight: '600', color: 'var(--text)' }}>Engineered for Global Scale</span>
+                 </div>
+                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                    <CheckCircle size={24} style={{ color: 'var(--accent-green)' }} />
+                    <span style={{ fontWeight: '600', color: 'var(--text)' }}>Systems that never sleep</span>
+                 </div>
+              </div>
             </div>
-            <div style={{ flex: 1 }}>
+            
+            <div style={{ flex: 1, position: 'relative' }}>
                <div style={{ 
                  width: '100%', 
-                 aspectRatio: '4/3', 
-                 borderRadius: '32px', 
+                 borderRadius: '40px', 
                  overflow: 'hidden', 
-                 boxShadow: 'var(--shadow-lg)' 
+                 boxShadow: 'var(--shadow-xl)',
+                 border: '8px solid white',
+                 transform: 'rotate(2deg)',
+                 transition: 'transform 0.3s ease'
+               }}
+               onMouseEnter={(e) => e.currentTarget.style.transform = 'rotate(0deg)'}
+               onMouseLeave={(e) => e.currentTarget.style.transform = 'rotate(2deg)'}
+               >
+                 <img src={successMeme} alt="Mission Accomplished" style={{ width: '100%', height: 'auto', display: 'block' }} />
+               </div>
+               {/* Meme-style floating badge */}
+               <div style={{
+                 position: 'absolute',
+                 bottom: '-20px',
+                 right: '-20px',
+                 background: 'var(--primary)',
+                 color: 'white',
+                 padding: '1rem 2rem',
+                 borderRadius: '20px',
+                 fontWeight: '900',
+                 fontSize: '1.2rem',
+                 boxShadow: 'var(--shadow-lg)',
+                 transform: 'rotate(-5deg)',
+                 zIndex: 2
                }}>
-                 <img src={teamPhoto} alt="WebCultivation Team" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                 POV: It just works. 🚀
                </div>
             </div>
           </div>
         </div>
       </section>
 
-
-      {/* Global Stats */}
-      <section className="section-padding" style={{ background: 'var(--bg-surface)', borderTop: '1px solid var(--border-main)', borderBottom: '1px solid var(--border-main)' }}>
+      {/* Stats */}
+      <section className="section" style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)' }}>
         <div className="container">
-          <div className="grid grid-cols-2 md-grid-cols-4 gap-8 text-center">
-            <div>
-              <h2 style={{ fontSize: '3.5rem', color: 'var(--primary)', fontWeight: '800' }}>500+</h2>
-              <p style={{ color: 'var(--text-muted)', fontWeight: '600' }}>Global Clients</p>
-            </div>
-            <div>
-              <h2 style={{ fontSize: '3.5rem', color: 'var(--accent-green)', fontWeight: '800' }}>10+</h2>
-              <p style={{ color: 'var(--text-muted)', fontWeight: '600' }}>Proprietary Products</p>
-            </div>
-            <div>
-              <h2 style={{ fontSize: '3.5rem', color: 'var(--text-main)', fontWeight: '800' }}>15+</h2>
-              <p style={{ color: 'var(--text-muted)', fontWeight: '600' }}>Countries Served</p>
-            </div>
-            <div>
-              <h2 style={{ fontSize: '3.5rem', color: 'var(--primary)', fontWeight: '800' }}>24/7</h2>
-              <p style={{ color: 'var(--text-muted)', fontWeight: '600' }}>Global Support</p>
-            </div>
+          <div className="grid md-grid-cols-4 gap-8">
+            {[
+              { label: 'Global Clients', val: '500+', col: 'var(--primary)' },
+              { label: 'Proprietary Products', val: '10+', col: 'var(--accent-green)' },
+              { label: 'Countries Served', val: '15+', col: 'var(--text)' },
+              { label: 'Success Rate', val: '100%', col: 'var(--primary)' }
+            ].map(s => (
+              <div key={s.label} className="text-center">
+                <div style={{ fontSize: '3rem', fontWeight: '900', color: s.col, marginBottom: '0.5rem' }}>{s.val}</div>
+                <div style={{ fontWeight: '700', color: 'var(--text-muted)', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{s.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* DNA */}
-      <section className="section-padding">
+      <section className="section">
         <div className="container">
-          <h2 className="text-center" style={{ fontSize: '3rem', marginBottom: '5rem', fontWeight: '800' }}>The WebCultivation <span style={{ color: 'var(--primary)' }}>DNA</span></h2>
-          <div className="grid grid-cols-1 md-grid-cols-2 gap-12">
-            <div className="flex gap-6">
-              <div style={{ minWidth: '56px', height: '56px', borderRadius: '16px', background: 'var(--bg-surface)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary)' }}><Globe size={28} /></div>
+          <h2 className="text-center" style={{ fontSize: '2.75rem', marginBottom: '5rem' }}>The WebCultivation <span className="text-gradient">DNA</span></h2>
+          <div className="grid md-grid-cols-2 gap-12">
+            <div className="card" style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
+              <div style={{ width: '64px', height: '64px', borderRadius: '16px', background: 'var(--bg-soft)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary)', flexShrink: 0 }}><Globe size={32} /></div>
               <div>
-                <h4 style={{ fontSize: '1.25rem', fontWeight: '700', marginBottom: '0.5rem' }}>Global-First Mindset</h4>
-                <p style={{ color: 'var(--text-muted)' }}>Solutions engineered to compete on the world stage, regardless of where your business is based.</p>
+                <h4 style={{ fontSize: '1.4rem', fontWeight: '800', marginBottom: '0.75rem' }}>Global-First Mindset</h4>
+                <p style={{ color: 'var(--text-muted)', lineHeight: '1.7' }}>Solutions engineered to compete on the world stage, regardless of where your business is based. We think global from day one.</p>
               </div>
             </div>
-            <div className="flex gap-6">
-              <div style={{ minWidth: '56px', height: '56px', borderRadius: '16px', background: 'var(--bg-surface)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-green)' }}><Users size={28} /></div>
+            <div className="card" style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
+              <div style={{ width: '64px', height: '64px', borderRadius: '16px', background: 'var(--bg-soft)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-green)', flexShrink: 0 }}><Users size={32} /></div>
               <div>
-                <h4 style={{ fontSize: '1.25rem', fontWeight: '700', marginBottom: '0.5rem' }}>Distributed Talent</h4>
-                <p style={{ color: 'var(--text-muted)' }}>Our remote global workforce brings the best technical minds together to solve your unique challenges.</p>
+                <h4 style={{ fontSize: '1.4rem', fontWeight: '800', marginBottom: '0.75rem' }}>Distributed Excellence</h4>
+                <p style={{ color: 'var(--text-muted)', lineHeight: '1.7' }}>Our remote global workforce brings the best technical minds together to solve your unique challenges with speed and precision.</p>
               </div>
             </div>
           </div>
