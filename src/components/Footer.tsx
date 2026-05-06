@@ -1,33 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Globe } from 'lucide-react';
+import { Mail, Globe, Phone, MapPin } from 'lucide-react';
+import logoMain from '../assets/logos/logo_main.jpg';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer style={{ background: 'var(--footer-bg)', borderTop: '1px solid var(--footer-border)', paddingTop: '6rem', paddingBottom: '3rem', color: 'var(--footer-text)' }}>
+    <footer style={{ background: '#FFFFFF', borderTop: '1px solid var(--border)', paddingTop: '6rem', paddingBottom: '3rem', color: 'var(--text-muted)' }}>
       <div className="container">
         <div className="grid grid-cols-1 md-grid-cols-2 lg-grid-cols-4 gap-12" style={{ marginBottom: '4rem' }}>
           
           {/* Brand Info */}
           <div className="flex flex-col gap-6">
-            <Link to="/" className="flex items-center gap-3">
-              <div style={{ width: '48px', height: '48px', background: 'var(--primary)', borderRadius: '14px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: '900', color: 'white', fontSize: '1.75rem', boxShadow: '0 4px 12px rgba(26, 63, 168, 0.4)' }}>W</div>
-              <span style={{ fontSize: '1.6rem', fontWeight: '800', color: 'var(--footer-heading)', letterSpacing: '-0.02em' }}>WebCultivation</span>
+            <Link to="/" className="flex items-center">
+              <img src={logoMain} alt="WebCultivation" style={{ height: '64px', width: 'auto' }} />
             </Link>
-            <p style={{ color: 'var(--footer-text)', fontSize: '0.95rem', lineHeight: '1.6', maxWidth: '300px' }}>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.6', maxWidth: '300px' }}>
               Your global partner for software engineering, AI automation, and comprehensive business transformation.
             </p>
             <div className="flex gap-4">
-              <a href="mailto:info@webcultivation.com" className="footer-link" style={{ background: 'var(--footer-border)', p: '0.5rem', borderRadius: '50%', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Mail size={18} /></a>
-              <a href="https://wa.me/918200858112" className="footer-link" style={{ background: 'var(--footer-border)', p: '0.5rem', borderRadius: '50%', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Globe size={18} /></a>
+              <a href="mailto:info@webcultivation.com" className="footer-link" style={{ background: 'var(--bg-soft)', borderRadius: '50%', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--border)' }}><Mail size={18} /></a>
+              <a href="https://wa.me/918200858112" className="footer-link" style={{ background: 'var(--bg-soft)', borderRadius: '50%', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--border)' }}><Globe size={18} /></a>
             </div>
           </div>
 
           {/* Solutions */}
           <div className="flex flex-col gap-5">
-            <h4 style={{ color: 'var(--footer-heading)', fontSize: '1.1rem', fontWeight: '800', marginBottom: '0.5rem' }}>Solutions</h4>
+            <h4 style={{ color: 'var(--text)', fontSize: '1.1rem', fontWeight: '800', marginBottom: '0.5rem' }}>Solutions</h4>
             <ul className="flex flex-col gap-3">
               <li><Link to="/products/webbill" className="footer-link">WebBill POS</Link></li>
               <li><Link to="/products/webinvoice" className="footer-link">WebInvoice</Link></li>
@@ -38,7 +38,7 @@ const Footer = () => {
 
           {/* Services */}
           <div className="flex flex-col gap-5">
-            <h4 style={{ color: 'var(--footer-heading)', fontSize: '1.1rem', fontWeight: '800', marginBottom: '0.5rem' }}>Services</h4>
+            <h4 style={{ color: 'var(--text)', fontSize: '1.1rem', fontWeight: '800', marginBottom: '0.5rem' }}>Services</h4>
             <ul className="flex flex-col gap-3">
               <li><Link to="/services" className="footer-link">Web Development</Link></li>
               <li><Link to="/services" className="footer-link">Digital Marketing</Link></li>
@@ -49,7 +49,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div className="flex flex-col gap-5">
-            <h4 style={{ color: 'var(--footer-heading)', fontSize: '1.1rem', fontWeight: '800', marginBottom: '0.5rem' }}>Contact</h4>
+            <h4 style={{ color: 'var(--text)', fontSize: '1.1rem', fontWeight: '800', marginBottom: '0.5rem' }}>Contact</h4>
             <div className="flex flex-col gap-4">
               <a href="mailto:info@webcultivation.com" className="flex items-center gap-3 footer-link">
                 <Mail size={18} style={{ color: 'var(--primary)' }} /> 
@@ -79,7 +79,7 @@ const Footer = () => {
         </div>
 
         {/* Localized Bottom */}
-        <div style={{ borderTop: '1px solid var(--footer-border)', paddingTop: '2.5rem', marginTop: '2rem' }}>
+        <div style={{ borderTop: '1px solid var(--border)', paddingTop: '2.5rem', marginTop: '2rem' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem' }}>
             <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
               {['Palanpur', 'Mehsana', 'Ahmedabad', 'Gandhinagar', 'Surat'].map(city => (
