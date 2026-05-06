@@ -106,7 +106,6 @@ const Home = () => {
         </div>
       </section>
 
-
       {/* ── SERVICES ── */}
       <section className="section">
         <div className="container">
@@ -142,6 +141,7 @@ const Home = () => {
             <Link to="/products" className="btn btn-secondary">Explore All <ArrowRight size={16} /></Link>
           </div>
           <div className="grid md-grid-cols-4 gap-6">
+            {products.map((p) => (
               <Link to={`/products/${p.id}`} key={p.id} className="card" style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', gap: '1.25rem', borderTop: `4px solid ${p.color}`, transition: 'transform 0.3s ease' }}>
                 <div style={{ background: '#ffffff', borderRadius: '12px', padding: '2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '120px', border: '1px solid var(--border)' }}>
                   <img src={p.logo} alt={p.name} style={{ height: '70px', width: 'auto', objectFit: 'contain', mixBlendMode: 'multiply' }} />
