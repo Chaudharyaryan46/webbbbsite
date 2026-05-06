@@ -19,10 +19,6 @@ const Footer = () => {
             <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.6', maxWidth: '300px' }}>
               Your global partner for software engineering, AI automation, and comprehensive business transformation.
             </p>
-            <div className="flex gap-4">
-              <a href="mailto:info@webcultivation.com" className="footer-link" style={{ background: 'var(--bg-soft)', borderRadius: '50%', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--border)' }}><Mail size={18} /></a>
-              <a href="https://wa.me/918200858112" className="footer-link" style={{ background: 'var(--bg-soft)', borderRadius: '50%', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--border)' }}><Globe size={18} /></a>
-            </div>
           </div>
 
           {/* Solutions */}
