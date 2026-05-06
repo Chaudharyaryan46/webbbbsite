@@ -28,13 +28,13 @@ const ProductPage: React.FC<ProductProps> = ({ name, tagline, description, featu
             
             {/* Left Content */}
             <div style={{ flex: '1' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                <div style={{ width: '64px', height: '64px', background: '#fff', borderRadius: '16px', padding: '0.75rem', border: '1px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <img src={logo} alt={name} style={{ height: '100%', objectFit: 'contain' }} />
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', marginBottom: '2rem' }}>
+                <div style={{ width: '80px', height: '80px', background: '#fff', borderRadius: '20px', padding: '0.8rem', border: '1px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: 'var(--shadow-sm)' }}>
+                  <img src={logo} alt={name} style={{ height: '100%', width: '100%', objectFit: 'contain' }} />
                 </div>
                 <div>
-                  <div style={{ color: color, fontWeight: '800', fontSize: '0.9rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}>PRODUCT</div>
-                  <h1 style={{ fontSize: '3rem', fontWeight: '900' }}>{name}</h1>
+                  <div style={{ color: color, fontWeight: '800', fontSize: '0.9rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>PRODUCT</div>
+                  <h1 style={{ fontSize: '3.25rem', fontWeight: '900', letterSpacing: '-0.02em' }}>{name}</h1>
                 </div>
               </div>
               <p style={{ fontSize: '1.5rem', fontWeight: '700', color: 'var(--text)', marginBottom: '1rem', lineHeight: '1.3' }}>{tagline}</p>

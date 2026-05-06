@@ -148,8 +148,8 @@ const Home = () => {
           <div className="grid md-grid-cols-4 gap-6">
             {products.map((p) => (
               <Link to={`/products/${p.id}`} key={p.id} className="card" style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', gap: '1.25rem', borderTop: `4px solid ${p.color}`, transition: 'transform 0.3s ease' }}>
-                <div style={{ background: '#ffffff', borderRadius: '12px', padding: '2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '120px', border: '1px solid var(--border)' }}>
-                  <img src={p.logo} alt={p.name} style={{ height: '70px', width: 'auto', objectFit: 'contain', mixBlendMode: 'multiply' }} />
+                <div style={{ background: '#ffffff', borderRadius: '12px', padding: '2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '140px', border: '1px solid var(--border)' }}>
+                  <img src={p.logo} alt={p.name} style={{ height: '90px', width: 'auto', objectFit: 'contain', mixBlendMode: 'multiply' }} />
                 </div>
                 <div>
                   <h4 style={{ fontSize: '1.15rem', fontWeight: '800', marginBottom: '0.25rem' }}>{p.name}</h4>
