@@ -105,7 +105,7 @@ const PalanpurPage = () => {
                <p style={{ fontStyle: 'italic', fontSize: '1rem', opacity: 0.9 }}>
                  "WebBill from WebCultivation is an all-in-one solution for orders and inventory. Highly reliable support!"
                </p>
-               <div style={{ fontWeight: '800', marginTop: '0.5rem', fontSize: '0.9rem' }}>— Jigar Chaudhary, Verified Review</div>
+               <div style={{ fontWeight: '800', marginTop: '0.5rem', fontSize: '0.9rem' }}>— Verified Local Review</div>
             </div>
           </div>
         </div>
