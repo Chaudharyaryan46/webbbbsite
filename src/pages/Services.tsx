@@ -1,51 +1,79 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Globe, Cpu, TrendingUp, Shield, Smartphone, Code, BarChart, Settings } from 'lucide-react';
+import { Globe, Cpu, TrendingUp, Shield, Code, ArrowRight, CheckCircle, Zap, Smartphone, BarChart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Services = () => {
+  const [activeTab, setActiveTab] = useState('Web Development');
+
   const serviceCategories = [
     {
-      title: "Core Software Engineering",
-      icon: <Code size={40} />,
-      services: [
-        "SaaS Product Development",
+      id: 'Web Development',
+      title: "Web & Software Development",
+      icon: <Code size={32} />,
+      color: 'var(--primary)',
+      description: "We build high-performance, scalable web applications and enterprise software systems tailored to your business goals.",
+      features: [
+        "Custom SaaS Architecture",
         "Enterprise ERP & CRM Systems",
-        "Custom Web & Mobile Apps",
-        "Cloud Infrastructure Setup"
-      ]
+        "E-commerce Marketplaces",
+        "Progressive Web Apps (PWA)",
+        "API Integration & Development",
+        "Cloud Infrastructure (AWS/Azure)"
+      ],
+      detailedDesc: "Our engineering team follows agile methodologies to deliver robust code. Whether you need a startup MVP or a complex enterprise transformation, we ensure your software is built for scale, security, and speed."
     },
     {
-      title: "AI & Automation",
-      icon: <Cpu size={40} />,
-      services: [
+      id: 'Digital Marketing',
+      title: "Digital Growth & Marketing",
+      icon: <TrendingUp size={32} />,
+      color: '#16A34A',
+      description: "Data-driven marketing strategies that drive high-intent traffic, increase conversions, and scale your brand globally.",
+      features: [
+        "Global & Local SEO",
+        "Performance Marketing (PPC)",
+        "Social Media Domination",
+        "Conversion Rate Optimization",
+        "Content Marketing Strategy",
+        "Marketing Automation"
+      ],
+      detailedDesc: "We don't just drive traffic; we drive revenue. Our marketing stack combines deep SEO expertise with advanced analytics to ensure every marketing dollar translates into measurable business growth."
+    },
+    {
+      id: 'AI Automation',
+      title: "AI & Process Automation",
+      icon: <Cpu size={32} />,
+      color: 'var(--jatas-red)',
+      description: "Leverage the power of Artificial Intelligence to automate complex workflows and handle customer communication at scale.",
+      features: [
         "AI Voice Agent Integration",
-        "Process Automation Workflows",
-        "Natural Language Processing",
-        "Predictive Sales Analytics"
-      ]
+        "NLP & Chatbot Workflows",
+        "Predictive Sales Analytics",
+        "Automated Lead Scoring",
+        "Business Process Automation",
+        "Custom LLM Implementations"
+      ],
+      detailedDesc: "The future of business is automated. Our AI solutions help you reduce operational overhead and improve customer response times through intelligent voice and text agents that work 24/7."
     },
     {
-      title: "Digital Growth & SEO",
-      icon: <TrendingUp size={40} />,
-      services: [
-        "Global SEO Strategy",
-        "Local Search Domination",
-        "Performance Marketing",
-        "Conversion Funnel Optimization"
-      ]
-    },
-    {
-      title: "Business Compliance",
-      icon: <Shield size={40} />,
-      services: [
-        "Company Registration",
-        "Trademark & FSSAI",
+      id: 'Business Compliance',
+      title: "Business & Legal Compliance",
+      icon: <Shield size={32} />,
+      color: '#D97706',
+      description: "End-to-end technical and legal support to ensure your business infrastructure is compliant with global and local standards.",
+      features: [
+        "Company Registration (Pvt Ltd/LLP)",
+        "Trademark & IP Protection",
         "GST & Financial Setup",
-        "Legal Tech Consulting"
-      ]
+        "FSSAI & Industrial Licenses",
+        "Legal Tech Consulting",
+        "Export/Import Documentation"
+      ],
+      detailedDesc: "Focus on your product while we handle the paperwork. From initial incorporation to complex international compliance, we provide the legal and financial backbone for your enterprise."
     }
   ];
+
+  const activeService = serviceCategories.find(s => s.id === activeTab) || serviceCategories[0];
 
   return (
     <main>
@@ -55,67 +83,129 @@ const Services = () => {
       </Helmet>
 
       {/* Hero */}
-      <section className="section-padding" style={{ background: 'var(--bg-surface)', paddingTop: '180px', borderBottom: '1px solid var(--border-main)' }}>
+      <section style={{ background: 'var(--bg-soft)', paddingTop: '160px', paddingBottom: '80px', borderBottom: '1px solid var(--border)' }}>
         <div className="container">
           <div className="text-center animate-fade">
-            <h1 style={{ fontSize: '4rem', marginBottom: '1.5rem', fontWeight: '800' }}>Comprehensive <span style={{ color: 'var(--primary-blue)' }}>Solutions</span></h1>
-            <p style={{ color: 'var(--text-muted)', fontSize: '1.3rem', maxWidth: '800px', margin: '0 auto' }}>
-              We build the systems that help modern enterprises launch smarter, operate better, and scale faster.
+            <h1 style={{ fontSize: '3.5rem', marginBottom: '1.5rem', fontWeight: '900' }}>
+              Comprehensive <span className="text-gradient">Services</span>
+            </h1>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1.25rem', maxWidth: '800px', margin: '0 auto' }}>
+              We provide the complete technical, marketing, and legal infrastructure required to build and scale a modern enterprise.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="section-padding">
+      {/* Interactive Services Section */}
+      <section className="section">
         <div className="container">
-          <div className="grid grid-cols-1 md-grid-cols-2 gap-8">
-            {serviceCategories.map((cat, i) => (
-              <div key={i} className="glass-card" style={{ padding: '4rem' }}>
-                <div style={{ color: 'var(--primary-blue)', marginBottom: '2rem' }}>{cat.icon}</div>
-                <h3 style={{ fontSize: '2rem', marginBottom: '1.5rem', fontWeight: '800' }}>{cat.title}</h3>
-                <ul className="flex flex-col gap-4">
-                  {cat.services.map((s, j) => (
-                    <li key={j} className="flex items-center gap-3" style={{ color: 'var(--text-muted)', fontSize: '1.1rem' }}>
-                      <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--accent-green)' }}></div>
-                      {s}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          
+          {/* Service Tabs */}
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center', marginBottom: '4rem' }}>
+            {serviceCategories.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => setActiveTab(cat.id)}
+                className={`btn ${activeTab === cat.id ? 'btn-primary' : 'btn-secondary'}`}
+                style={{ 
+                  padding: '1rem 2rem', 
+                  borderRadius: '16px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.75rem',
+                  fontSize: '1.05rem',
+                  border: activeTab === cat.id ? 'none' : '1.5px solid var(--border)'
+                }}
+              >
+                <span style={{ opacity: activeTab === cat.id ? 1 : 0.6 }}>{cat.icon}</span>
+                {cat.id}
+              </button>
             ))}
           </div>
+
+          {/* Active Service Content */}
+          <div className="animate-fade" key={activeTab}>
+            <div className="card" style={{ padding: '4rem', display: 'flex', flexDirection: 'column', gap: '3rem', borderLeft: `8px solid ${activeService.color}` }}>
+              <div className="row" style={{ alignItems: 'flex-start', gap: '5rem' }}>
+                
+                {/* Left: Description */}
+                <div style={{ flex: '1.2' }}>
+                  <div style={{ color: activeService.color, marginBottom: '1.5rem' }}>
+                    {React.cloneElement(activeService.icon as React.ReactElement, { size: 64 })}
+                  </div>
+                  <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>{activeService.title}</h2>
+                  <p style={{ fontSize: '1.25rem', color: 'var(--text)', marginBottom: '1.5rem', fontWeight: '500' }}>
+                    {activeService.description}
+                  </p>
+                  <p style={{ color: 'var(--text-muted)', lineHeight: '1.8', fontSize: '1.1rem' }}>
+                    {activeService.detailedDesc}
+                  </p>
+                  <div style={{ marginTop: '3rem' }}>
+                     <Link to="/contact" className="btn btn-primary" style={{ padding: '1.2rem 3rem' }}>
+                        Inquire about {activeTab} <ArrowRight size={20} />
+                     </Link>
+                  </div>
+                </div>
+
+                {/* Right: Features Grid */}
+                <div style={{ flex: '1', background: 'var(--bg-soft)', padding: '2.5rem', borderRadius: '24px', border: '1px solid var(--border)' }}>
+                  <h4 style={{ fontSize: '1.2rem', marginBottom: '2rem', fontWeight: '800', color: 'var(--primary)' }}>What's Included:</h4>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                    {activeService.features.map((f) => (
+                      <div key={f} style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                        <div style={{ color: activeService.color }}><CheckCircle size={24} /></div>
+                        <span style={{ fontWeight: '600', color: 'var(--text-muted)', fontSize: '1.05rem' }}>{f}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
       {/* Methodology */}
-      <section className="section-padding" style={{ background: 'var(--bg-surface)', borderTop: '1px solid var(--border-main)' }}>
+      <section className="section" style={{ background: 'var(--bg-soft)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
         <div className="container">
-          <h2 className="text-center" style={{ fontSize: '3rem', marginBottom: '5rem', fontWeight: '800' }}>The WebCultivation <span style={{ color: 'var(--primary-blue)' }}>Method</span></h2>
-          <div className="grid grid-cols-1 md-grid-cols-4 gap-8">
+          <h2 className="text-center" style={{ fontSize: '2.5rem', marginBottom: '5rem' }}>The WebCultivation <span className="text-gradient">Method</span></h2>
+          <div className="grid md-grid-cols-4 gap-8">
             {[
-              { step: "01", title: "Strategy", desc: "Deep market and technical analysis." },
-              { step: "02", title: "Design", desc: "User-centric UI/UX and architecture." },
-              { step: "03", title: "Build", desc: "Agile, high-performance engineering." },
-              { step: "04", title: "Scale", desc: "Continuous optimization and growth." }
+              { step: "01", title: "Strategy", desc: "Deep market and technical analysis to define clear objectives." },
+              { step: "02", title: "Design", desc: "User-centric UI/UX and scalable technical architecture." },
+              { step: "03", title: "Build", desc: "Agile, high-performance engineering with rigorous testing." },
+              { step: "04", title: "Scale", desc: "Continuous optimization, marketing, and global growth." }
             ].map((m, i) => (
               <div key={i} className="text-center">
-                <div style={{ fontSize: '4rem', fontWeight: '800', color: 'var(--primary-blue)', opacity: 0.1, marginBottom: '-1rem' }}>{m.step}</div>
-                <h4 style={{ fontSize: '1.5rem', fontWeight: '800', marginBottom: '1rem' }}>{m.title}</h4>
-                <p style={{ color: 'var(--text-muted)' }}>{m.desc}</p>
+                <div style={{ fontSize: '4rem', fontWeight: '900', color: 'var(--primary)', opacity: 0.1, marginBottom: '-1.5rem' }}>{m.step}</div>
+                <h4 style={{ fontSize: '1.4rem', fontWeight: '800', marginBottom: '1rem' }}>{m.title}</h4>
+                <p style={{ color: 'var(--text-muted)', lineHeight: '1.6' }}>{m.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="section-padding">
+      {/* Final CTA */}
+      <section className="section">
         <div className="container">
-          <div style={{ background: 'var(--bg-surface)', border: '1px solid var(--border-main)', padding: '5rem', borderRadius: '40px', textAlign: 'center' }}>
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', fontWeight: '800' }}>Need a custom solution?</h2>
-            <p style={{ color: 'var(--text-muted)', fontSize: '1.2rem', marginBottom: '2.5rem' }}>Let's build a dedicated engineering team for your unique business needs.</p>
-            <Link to="/contact" className="btn btn-primary" style={{ padding: '1.2rem 4rem', borderRadius: '50px' }}>Schedule Consultation</Link>
+          <div style={{ 
+            background: 'var(--primary)', 
+            borderRadius: 'var(--radius-xl)', 
+            padding: '5rem', 
+            textAlign: 'center', 
+            color: 'white',
+            boxShadow: 'var(--shadow-xl)' 
+          }}>
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: 'white' }}>Ready to transform your business?</h2>
+            <p style={{ fontSize: '1.25rem', opacity: 0.9, maxWidth: '600px', margin: '0 auto 3rem' }}>
+              Let's build a dedicated team for your unique engineering and marketing needs.
+            </p>
+            <Link to="/contact" className="btn" style={{ background: 'white', color: 'var(--primary)', border: 'none', padding: '1.2rem 4rem' }}>
+              Schedule Free Consultation
+            </Link>
           </div>
         </div>
       </section>
