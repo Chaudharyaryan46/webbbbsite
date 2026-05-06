@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 import CityLandingPage from './pages/locations/CityLandingPage';
 import ProductPage from './pages/products/ProductPage';
 import WhatsAppButton from './components/WhatsAppButton';
+import PalanpurPage from './pages/locations/PalanpurPage';
 
 // Logos
 import webbillLogo from './assets/logos/webbill.jpg';
@@ -23,11 +24,6 @@ import webbillPreview from './assets/photos/webbill_promo.png';
 import jatasaiPreview from './assets/photos/jatas_ai_preview.png';
 import webmartPreview from './assets/photos/webmart_preview.png';
 import webinvoicePreview from './assets/photos/webinvoice_promo.png';
-
-const App = () => {
-  return (
-    <HelmetProvider>
-import PalanpurPage from './pages/locations/PalanpurPage';
 
 const App = () => {
   return (
