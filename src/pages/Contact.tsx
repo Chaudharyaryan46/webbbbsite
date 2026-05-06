@@ -37,7 +37,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 style={{ fontSize: '1.25rem', fontWeight: '700', marginBottom: '0.25rem' }}>Location</h4>
-                      <p style={{ color: 'var(--text-muted)' }}>1st Floor, Krishna Complex, Opposite Joravar Palace, Palanpur, Gujarat 385001</p>
+                      <p style={{ color: 'var(--text-muted)' }}>Dairy Road, Palanpur, Gujarat - 385001</p>
                     </div>
                   </div>
                   <div className="flex gap-6">
