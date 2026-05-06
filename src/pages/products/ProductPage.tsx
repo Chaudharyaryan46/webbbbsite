@@ -29,13 +29,13 @@ const ProductPage: React.FC<ProductPageProps> = ({ name, tagline, description, f
             {/* Left: text */}
             <div style={{ flex: '1.1' }} className="animate-fade">
               {logo && (
-                <div style={{ marginBottom: '2rem' }}>
-                  <img src={logo} alt={`${name} logo`} style={{ height: '52px', objectFit: 'contain' }} />
+                <div style={{ marginBottom: '2.5rem', background: '#fff', padding: '1.5rem', borderRadius: '16px', display: 'inline-block', border: '1px solid var(--border)', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
+                  <img src={logo} alt={`${name} logo`} style={{ height: '65px', objectFit: 'contain' }} />
                 </div>
               )}
-              <div className="label" style={{ color: color, marginBottom: '1rem' }}>{name} Ecosystem</div>
-              <h1 style={{ fontSize: '3.5rem', marginBottom: '1rem', color: 'var(--text)' }}>{name}</h1>
-              <h2 style={{ fontSize: '1.4rem', color: 'var(--text-muted)', marginBottom: '1.5rem', fontWeight: '500', lineHeight: '1.5' }}>{tagline}</h2>
+              <div className="label" style={{ color: color, marginBottom: '1rem', fontWeight: '800' }}>{name} Ecosystem</div>
+              <h1 style={{ fontSize: '4rem', marginBottom: '1.5rem', color: 'var(--text)', letterSpacing: '-0.02em' }}>{name}</h1>
+              <h2 style={{ fontSize: '1.5rem', color: 'var(--text-muted)', marginBottom: '2rem', fontWeight: '500', lineHeight: '1.5' }}>{tagline}</h2>
               <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', lineHeight: '1.75', marginBottom: '2.5rem', maxWidth: '520px' }}>{description}</p>
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                 <Link to="/contact" className="btn btn-primary" style={{ background: color, boxShadow: `0 6px 18px ${color}33` }}>
@@ -71,13 +71,20 @@ const ProductPage: React.FC<ProductPageProps> = ({ name, tagline, description, f
               </div>
               {/* Accent badge */}
               <div style={{
-                position: 'absolute', bottom: '24px', left: '-24px',
-                background: color, color: '#fff',
-                padding: '0.75rem 1.25rem', borderRadius: '14px',
-                fontWeight: '700', fontSize: '0.8rem',
-                boxShadow: 'var(--shadow-lg)',
+                position: 'absolute', bottom: '20px', right: '20px',
+                background: 'rgba(255, 255, 255, 0.9)',
+                color: color,
+                backdropFilter: 'blur(10px)',
+                padding: '0.6rem 1.2rem', borderRadius: '12px',
+                fontWeight: '800', fontSize: '0.85rem',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
+                border: `1px solid ${color}33`,
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                zIndex: 10
               }}>
-                ✓ Certified Enterprise Solution
+                <CheckCircle size={16} /> Certified Enterprise Solution
               </div>
             </div>
 
@@ -107,31 +114,6 @@ const ProductPage: React.FC<ProductPageProps> = ({ name, tagline, description, f
         </div>
       </section>
 
-      {/* ── CTA ── */}
-      <section style={{ paddingBottom: '96px' }}>
-        <div className="container">
-          <div style={{
-            background: 'var(--bg-soft)',
-            border: '1px solid var(--border)',
-            borderRadius: 'var(--radius-xl)',
-            padding: '5rem 3rem',
-            textAlign: 'center',
-          }}>
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '1.25rem' }}>Get Started with {name}</h2>
-            <p style={{ color: 'var(--text-muted)', fontSize: '1.15rem', maxWidth: '560px', margin: '0 auto 2.5rem' }}>
-              Join hundreds of businesses scaling with our smart solutions. No credit card required.
-            </p>
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link to="/contact" className="btn btn-primary" style={{ background: color, boxShadow: `0 6px 18px ${color}33` }}>
-                Schedule a Demo
-              </Link>
-              <button className="btn btn-secondary">
-                <Download size={17} /> Download Brochure
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
   );
 };

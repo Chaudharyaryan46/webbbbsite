@@ -39,28 +39,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="section-padding">
-        <div className="container">
-          <div className="grid grid-cols-1 md-grid-cols-3 gap-8">
-            <div className="glass-card flex flex-col gap-4">
-              <div style={{ color: 'var(--primary-blue)' }}><Lightbulb size={32} /></div>
-              <h3 style={{ fontWeight: '800' }}>Think</h3>
-              <p style={{ color: 'var(--text-muted)' }}>We start with deep strategy. Understanding your business model is the first step to building a system that actually works.</p>
-            </div>
-            <div className="glass-card flex flex-col gap-4">
-              <div style={{ color: 'var(--accent-green)' }}><Target size={32} /></div>
-              <h3 style={{ fontWeight: '800' }}>Build</h3>
-              <p style={{ color: 'var(--text-muted)' }}>Our engineering team follows global standards to build robust, scalable, and secure software infrastructures.</p>
-            </div>
-            <div className="glass-card flex flex-col gap-4">
-              <div style={{ color: 'var(--primary-blue)' }}><TrendingUp size={32} /></div>
-              <h3 style={{ fontWeight: '800' }}>Transform</h3>
-              <p style={{ color: 'var(--text-muted)' }}>The end goal is transformation. Measurable growth, automated efficiency, and a business that runs itself.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Global Stats */}
       <section className="section-padding" style={{ background: 'var(--bg-surface)', borderTop: '1px solid var(--border-main)', borderBottom: '1px solid var(--border-main)' }}>

@@ -37,7 +37,7 @@ const Home = () => {
     <main>
       <Helmet>
         <title>WebCultivation Technology | Global Software & AI Transformation Company</title>
-        <meta name="description" content="Think. Build. Transform. Leading software company delivering SaaS, AI, ERP and digital growth solutions globally from Gujarat, India." />
+        <meta name="description" content="Leading software company delivering SaaS, AI, ERP and digital growth solutions globally from Gujarat, India." />
       </Helmet>
       <Schema data={schema} />
 
@@ -48,7 +48,12 @@ const Home = () => {
 
             {/* Left */}
             <div style={{ flex: '1.1' }} className="animate-fade">
-              <div className="badge" style={{ marginBottom: '1.5rem' }}>Think • Build • Transform</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
+                <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#16A34A' }}></div>
+                <span style={{ fontSize: '0.85rem', fontWeight: '700', color: 'var(--text-muted)', letterSpacing: '0.05em' }}>
+                  Gujarat, India — Serving 15+ Countries
+                </span>
+              </div>
               <h1 style={{ fontSize: '3.75rem', marginBottom: '1.5rem' }}>
                 Engineering <span className="text-gradient">Business</span><br />Infrastructure
               </h1>
@@ -101,20 +106,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ── CITY TRUST BAR ── */}
-      <section style={{ background: 'var(--bg)', borderBottom: '1px solid var(--border)', padding: '1.5rem 0' }}>
-        <div className="container">
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
-            <span style={{ fontSize: '0.75rem', color: 'var(--text-light)', fontWeight: '700', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Serving</span>
-            {['Palanpur', 'Mehsana', 'Ahmedabad', 'Gandhinagar', 'Surat', 'USA', 'UK', 'UAE'].map((c, i, arr) => (
-              <React.Fragment key={c}>
-                <span style={{ fontWeight: '600', color: 'var(--text-muted)', fontSize: '0.9rem' }}>{c}</span>
-                {i < arr.length - 1 && <span style={{ color: 'var(--border-strong)' }}>·</span>}
-              </React.Fragment>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── SERVICES ── */}
       <section className="section">
@@ -151,10 +142,9 @@ const Home = () => {
             <Link to="/products" className="btn btn-secondary">Explore All <ArrowRight size={16} /></Link>
           </div>
           <div className="grid md-grid-cols-4 gap-6">
-            {products.map((p) => (
-              <Link to={`/products/${p.id}`} key={p.id} className="card" style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', gap: '1.25rem', borderTop: `4px solid ${p.color}` }}>
-                <div style={{ background: 'var(--bg-soft)', borderRadius: '12px', padding: '1.25rem', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '90px' }}>
-                  <img src={p.logo} alt={p.name} style={{ height: '55px', objectFit: 'contain' }} />
+              <Link to={`/products/${p.id}`} key={p.id} className="card" style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', gap: '1.25rem', borderTop: `4px solid ${p.color}`, transition: 'transform 0.3s ease' }}>
+                <div style={{ background: '#fff', borderRadius: '12px', padding: '2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '120px', border: '1px solid var(--border)' }}>
+                  <img src={p.logo} alt={p.name} style={{ height: '70px', width: 'auto', objectFit: 'contain' }} />
                 </div>
                 <div>
                   <h4 style={{ fontSize: '1.15rem', fontWeight: '800', marginBottom: '0.25rem' }}>{p.name}</h4>

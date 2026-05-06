@@ -27,6 +27,11 @@ import webinvoicePreview from './assets/photos/webinvoice_promo.png';
 const App = () => {
   return (
     <HelmetProvider>
+import PalanpurPage from './pages/locations/PalanpurPage';
+
+const App = () => {
+  return (
+    <HelmetProvider>
       <Router>
         <div className="flex flex-col min-h-screen">
           <Navbar />
@@ -37,7 +42,7 @@ const App = () => {
               <Route path="/products" element={<Products />} />
               <Route path="/services" element={<Services />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<Home />} />
+              <Route path="/software-company-in-palanpur" element={<PalanpurPage />} />
 
               {/* Individual Product Pages */}
               <Route path="/products/webbill" element={

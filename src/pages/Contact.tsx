@@ -108,17 +108,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map Section */}
-      <section style={{ height: '500px', background: 'var(--bg-surface)', borderTop: '1px solid var(--border-main)' }}>
-        {/* Simplified Map Placeholder */}
-        <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'radial-gradient(circle at 50% 50%, #e2e8f0 0%, #f8fafc 100%)' }}>
-          <div style={{ textAlign: 'center' }}>
-             <MapPin size={48} color="var(--primary-blue)" style={{ margin: '0 auto 1rem' }} />
-             <h3 style={{ fontWeight: '800' }}>HQ - Palanpur, Gujarat</h3>
-             <p style={{ color: 'var(--text-muted)' }}>Enterprise Center & Innovation Lab</p>
-          </div>
-        </div>
-      </section>
     </main>
   );
 };

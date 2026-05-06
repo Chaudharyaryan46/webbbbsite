@@ -32,15 +32,6 @@ const CityLandingPage: React.FC<CityLandingPageProps> = ({ city }) => {
                 <Link to="/contact" className="btn btn-outline" style={{ padding: '1.2rem 3rem', borderRadius: '50px', background: 'white' }}>Contact Local Office</Link>
               </div>
             </div>
-            <div className="hidden md-flex" style={{ flex: 1, position: 'relative' }}>
-               <div style={{ width: '100%', aspectRatio: '1', background: 'white', borderRadius: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--border-main)', boxShadow: 'var(--shadow-lg)' }}>
-                  <div style={{ textAlign: 'center' }}>
-                    <MapPin size={80} color="var(--primary-blue)" style={{ marginBottom: '1rem' }} />
-                    <h2 style={{ fontWeight: '800' }}>{city} Office</h2>
-                    <p style={{ color: 'var(--text-muted)' }}>Enterprise Center & Support Hub</p>
-                  </div>
-               </div>
-            </div>
           </div>
         </div>
       </section>
