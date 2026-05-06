@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Shield, Zap, Globe, Star } from 'lucide-react';
+import { CheckCircle, ArrowRight, Shield, Zap, Globe, Star, Quote } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 import webbillLogo from '../../assets/logos/webbill.jpg';
@@ -32,6 +32,27 @@ const PalanpurPage = () => {
     }
   ];
 
+  const clientReviews = [
+    {
+      product: 'WebBill',
+      client: 'Atithi Restaurant',
+      text: "WebBill software hamare hotel ke orders aur inventory ko bahut efficiently manage karta hai. Palanpur mein best support milti hai.",
+      rating: 5
+    },
+    {
+      product: 'WebInvoice',
+      client: 'Arbuda Cab',
+      text: "Professional GST billing for our cab service has never been easier. WebInvoice is fast and very reliable for our daily operations.",
+      rating: 5
+    },
+    {
+      product: 'WebMart',
+      client: 'Super Mall',
+      text: "Managing a large inventory and barcode scanning at Super Mall is now seamless thanks to WebMart. Highly recommended for retail marts.",
+      rating: 5
+    }
+  ];
+
   return (
     <main>
       <Helmet>
@@ -50,7 +71,42 @@ const PalanpurPage = () => {
             <p style={{ color: 'var(--text-muted)', fontSize: '1.25rem', maxWidth: '700px', margin: '0 auto 2.5rem' }}>
               WebCultivation Technology is dedicated to empowering businesses in Palanpur with world-class billing, ERP, and AI solutions.
             </p>
-            <Link to="/contact" className="btn btn-primary">Get Your Local Demo</Link>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', alignItems: 'center' }}>
+              <Link to="/contact" className="btn btn-primary">Get Your Local Demo</Link>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <div style={{ display: 'flex', color: '#FFB800' }}>
+                   {[1,2,3,4,5].map(i => <Star key={i} size={18} fill="#FFB800" />)}
+                </div>
+                <span style={{ fontWeight: '700' }}>5.0 Rating</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* GMB Showcase */}
+      <section style={{ padding: '3rem 0', background: 'var(--primary)', color: 'white' }}>
+        <div className="container">
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '3rem', flexWrap: 'wrap' }}>
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: '3rem', fontWeight: '900' }}>5.0</div>
+              <div style={{ display: 'flex', justifyContent: 'center', color: '#FFB800', marginBottom: '0.5rem' }}>
+                {[1,2,3,4,5].map(i => <Star key={i} size={24} fill="#FFB800" />)}
+              </div>
+              <div style={{ opacity: 0.9, fontWeight: '600' }}>Google Rating</div>
+            </div>
+            <div style={{ height: '60px', width: '1px', background: 'rgba(255,255,255,0.2)' }} className="hidden md-flex"></div>
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: '3rem', fontWeight: '900' }}>40+</div>
+              <div style={{ opacity: 0.9, fontWeight: '600', marginTop: '0.5rem' }}>Verified Reviews</div>
+            </div>
+            <div style={{ height: '60px', width: '1px', background: 'rgba(255,255,255,0.2)' }} className="hidden md-flex"></div>
+            <div style={{ maxWidth: '400px' }}>
+               <p style={{ fontStyle: 'italic', fontSize: '1rem', opacity: 0.9 }}>
+                 "WebBill from WebCultivation is an all-in-one solution for orders and inventory. Highly reliable support!"
+               </p>
+               <div style={{ fontWeight: '800', marginTop: '0.5rem', fontSize: '0.9rem' }}>— Jigar Chaudhary, Verified Review</div>
+            </div>
           </div>
         </div>
       </section>
@@ -80,12 +136,43 @@ const PalanpurPage = () => {
         </div>
       </section>
 
+      {/* Verified Client Reviews */}
+      <section className="section" style={{ background: 'var(--bg-soft)', borderTop: '1px solid var(--border)' }}>
+        <div className="container">
+          <div style={{ marginBottom: '4rem', textAlign: 'center' }}>
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Success Stories in <span className="text-gradient">Palanpur</span></h2>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1.15rem' }}>Real feedback from local businesses powered by our systems.</p>
+          </div>
+          <div className="grid md-grid-cols-3 gap-8">
+            {clientReviews.map((r) => (
+              <div key={r.client} className="card" style={{ position: 'relative', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', top: '-10px', right: '-10px', opacity: 0.05 }}>
+                  <Quote size={80} />
+                </div>
+                <div style={{ display: 'flex', gap: '0.2rem', marginBottom: '1.25rem', color: '#FFB800' }}>
+                  {[1,2,3,4,5].map(i => <Star key={i} size={18} fill="#FFB800" />)}
+                </div>
+                <p style={{ fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '2rem', color: 'var(--text)', fontStyle: 'italic' }}>
+                  "{r.text}"
+                </p>
+                <div style={{ borderTop: '1px solid var(--border)', paddingTop: '1.5rem' }}>
+                  <div style={{ fontWeight: '800', fontSize: '1.1rem' }}>{r.client}</div>
+                  <div style={{ color: 'var(--primary)', fontWeight: '700', fontSize: '0.85rem', textTransform: 'uppercase', marginTop: '0.25rem' }}>
+                    Using {r.product}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Why Local Matters */}
-      <section className="section" style={{ background: 'var(--bg-soft)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
+      <section className="section">
         <div className="container">
           <div className="row" style={{ alignItems: 'center' }}>
             <div style={{ flex: 1 }}>
-              <h2 style={{ fontSize: '2.75rem', marginBottom: '1.5rem' }}>Why Businesses in <span style={{ color: 'var(--primary)' }}>Palanpur</span> Choose Us</h2>
+              <h2 style={{ fontSize: '2.75rem', marginBottom: '1.5rem' }}>Local Support, <span style={{ color: 'var(--primary)' }}>Real Impact</span></h2>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                 {[
                   'Local Support Team available on-site in Palanpur.',
@@ -119,35 +206,6 @@ const PalanpurPage = () => {
                   <div style={{ color: 'var(--text-muted)', fontWeight: '700' }}>Expertise</div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Local Reviews / Trust */}
-      <section className="section">
-        <div className="container">
-          <div className="text-center" style={{ marginBottom: '4rem' }}>
-            <h2 style={{ fontSize: '2.5rem' }}>Trusted by Palanpur's Best</h2>
-          </div>
-          <div className="grid md-grid-cols-2 gap-8">
-            <div className="card" style={{ background: 'var(--bg-soft)', border: 'none' }}>
-              <div style={{ display: 'flex', gap: '0.2rem', marginBottom: '1rem', color: '#FFB800' }}>
-                {[1,2,3,4,5].map(i => <Star key={i} size={20} fill="#FFB800" />)}
-              </div>
-              <p style={{ fontSize: '1.1rem', fontStyle: 'italic', marginBottom: '1.5rem' }}>
-                "WebBill has completely changed how we handle orders at our restaurant. Being a local company in Palanpur, their support is amazing."
-              </p>
-              <div style={{ fontWeight: '700' }}>— Local Restaurant Owner, Palanpur</div>
-            </div>
-            <div className="card" style={{ background: 'var(--bg-soft)', border: 'none' }}>
-              <div style={{ display: 'flex', gap: '0.2rem', marginBottom: '1rem', color: '#FFB800' }}>
-                {[1,2,3,4,5].map(i => <Star key={i} size={20} fill="#FFB800" />)}
-              </div>
-              <p style={{ fontSize: '1.1rem', fontStyle: 'italic', marginBottom: '1.5rem' }}>
-                "We needed a billing software that could handle GST and local inventory for our mart. WebMart was the perfect solution."
-              </p>
-              <div style={{ fontWeight: '700' }}>— Supermarket Manager, Palanpur</div>
             </div>
           </div>
         </div>

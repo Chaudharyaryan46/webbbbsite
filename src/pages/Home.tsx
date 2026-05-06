@@ -68,6 +68,19 @@ const Home = () => {
                   Get Consultation
                 </Link>
               </div>
+              <div style={{ marginTop: '2.5rem', display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', background: 'white', padding: '0.75rem 1.25rem', borderRadius: '16px', boxShadow: 'var(--shadow-sm)', border: '1px solid var(--border)' }}>
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Logo.svg" alt="Google" style={{ height: '20px' }} />
+                  <div style={{ height: '24px', width: '1px', background: 'var(--border)' }}></div>
+                  <div style={{ display: 'flex', color: '#FFB800' }}>
+                    {[1,2,3,4,5].map(i => <Star key={i} size={16} fill="#FFB800" />)}
+                  </div>
+                  <span style={{ fontWeight: '800', fontSize: '0.9rem' }}>5.0 Rating</span>
+                </div>
+                <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem', fontWeight: '600' }}>
+                  40+ Verified Reviews
+                </div>
+              </div>
               <div style={{ marginTop: '2.5rem', display: 'flex', gap: '2.5rem', flexWrap: 'wrap' }}>
                 {[['500+', 'Global Clients'], ['15+', 'Countries'], ['4', 'Products']].map(([n, l]) => (
                   <div key={l}>
