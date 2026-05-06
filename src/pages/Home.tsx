@@ -9,7 +9,7 @@ import webmartLogo from '../assets/logos/webmart.png';
 import webinvoiceLogo from '../assets/logos/webinvoice.png';
 import jatasaiLogo from '../assets/logos/jatasai.png';
 import globalNetwork from '../assets/photos/global_network.png';
-import googleLogo from '../assets/photos/google_logo.svg';
+import googleReviewsBadge from '../assets/photos/google_reviews_badge.png';
 
 const Home = () => {
   const schema = {
@@ -72,13 +72,8 @@ const Home = () => {
 
               {/* GMB Rating Badge */}
               <div style={{ marginTop: '2.5rem', display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', background: 'white', padding: '0.75rem 1.25rem', borderRadius: '16px', boxShadow: 'var(--shadow-sm)', border: '1px solid var(--border)' }}>
-                  <img src={googleLogo} alt="Google" style={{ height: '20px' }} />
-                  <div style={{ height: '24px', width: '1px', background: 'var(--border)' }}></div>
-                  <div style={{ display: 'flex', color: '#FFB800' }}>
-                    {[1,2,3,4,5].map(i => <Star key={i} size={16} fill="#FFB800" />)}
-                  </div>
-                  <span style={{ fontWeight: '800', fontSize: '0.9rem' }}>5.0 Rating</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', background: 'white', padding: '0.5rem 1rem', borderRadius: '16px', boxShadow: 'var(--shadow-sm)', border: '1px solid var(--border)' }}>
+                  <img src={googleReviewsBadge} alt="Google Reviews 5 Star Rating" style={{ height: '48px', width: 'auto' }} />
                 </div>
                 <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem', fontWeight: '600' }}>
                   40+ Verified Reviews
