@@ -69,22 +69,6 @@ const ProductPage: React.FC<ProductPageProps> = ({ name, tagline, description, f
                   </div>
                 )}
               </div>
-              {/* Accent badge */}
-              <div style={{
-                position: 'absolute', top: '20px', right: '20px',
-                background: 'rgba(255, 255, 255, 0.95)',
-                color: color,
-                backdropFilter: 'blur(10px)',
-                padding: '0.6rem 1.2rem', borderRadius: '12px',
-                fontWeight: '800', fontSize: '0.8rem',
-                boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
-                border: `1px solid ${color}33`,
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-                zIndex: 10
-              }}>
-                <CheckCircle size={16} /> Certified Enterprise Solution
               </div>
             </div>
 
