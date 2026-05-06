@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Globe, Cpu, TrendingUp, Shield, Code, ArrowRight, CheckCircle, Zap, Smartphone, BarChart } from 'lucide-react';
+import { Cpu, TrendingUp, Shield, Code, ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Services = () => {
@@ -11,6 +11,7 @@ const Services = () => {
       id: 'Web Development',
       title: "Web & Software Development",
       icon: <Code size={32} />,
+      iconLarge: <Code size={64} />,
       color: 'var(--primary)',
       description: "We build high-performance, scalable web applications and enterprise software systems tailored to your business goals.",
       features: [
@@ -27,6 +28,7 @@ const Services = () => {
       id: 'Digital Marketing',
       title: "Digital Growth & Marketing",
       icon: <TrendingUp size={32} />,
+      iconLarge: <TrendingUp size={64} />,
       color: '#16A34A',
       description: "Data-driven marketing strategies that drive high-intent traffic, increase conversions, and scale your brand globally.",
       features: [
@@ -43,6 +45,7 @@ const Services = () => {
       id: 'AI Automation',
       title: "AI & Process Automation",
       icon: <Cpu size={32} />,
+      iconLarge: <Cpu size={64} />,
       color: 'var(--jatas-red)',
       description: "Leverage the power of Artificial Intelligence to automate complex workflows and handle customer communication at scale.",
       features: [
@@ -59,6 +62,7 @@ const Services = () => {
       id: 'Business Compliance',
       title: "Business & Legal Compliance",
       icon: <Shield size={32} />,
+      iconLarge: <Shield size={64} />,
       color: '#D97706',
       description: "End-to-end technical and legal support to ensure your business infrastructure is compliant with global and local standards.",
       features: [
@@ -131,7 +135,7 @@ const Services = () => {
                 {/* Left: Description */}
                 <div style={{ flex: '1.2' }}>
                   <div style={{ color: activeService.color, marginBottom: '1.5rem' }}>
-                    {React.cloneElement(activeService.icon as React.ReactElement, { size: 64 })}
+                    {activeService.iconLarge}
                   </div>
                   <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>{activeService.title}</h2>
                   <p style={{ fontSize: '1.25rem', color: 'var(--text)', marginBottom: '1.5rem', fontWeight: '500' }}>

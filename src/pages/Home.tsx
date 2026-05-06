@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Globe, Zap, Shield, CheckCircle } from 'lucide-react';
+import { ArrowRight, Globe, Zap, Shield, CheckCircle, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Schema from '../components/Schema';
 

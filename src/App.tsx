@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -25,10 +25,20 @@ import jatasaiPreview from './assets/photos/jatas_ai_preview.png';
 import webmartPreview from './assets/photos/webmart_preview.png';
 import webinvoicePreview from './assets/photos/webinvoice_promo.png';
 
+// ScrollToTop Component to ensure every navigation starts at the top
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};
+
 const App = () => {
   return (
     <HelmetProvider>
       <Router>
+        <ScrollToTop />
         <div className="flex flex-col min-h-screen">
           <Navbar />
           <div className="flex-grow">
@@ -92,6 +102,9 @@ const App = () => {
               <Route path="/locations/ahmedabad" element={<CityLandingPage city="Ahmedabad" />} />
               <Route path="/locations/gandinagar" element={<CityLandingPage city="Gandhinagar" />} />
               <Route path="/locations/surat" element={<CityLandingPage city="Surat" />} />
+
+              {/* Catch-all Redirect to Home to prevent 404 glitches on refresh */}
+              <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </div>
           <Footer />
