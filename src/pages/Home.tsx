@@ -9,6 +9,7 @@ import webmartLogo from '../assets/logos/webmart.png';
 import webinvoiceLogo from '../assets/logos/webinvoice.png';
 import jatasaiLogo from '../assets/logos/jatasai.png';
 import googleReviewsBadge from '../assets/photos/google_reviews_badge.png';
+import globalTeamIllustration from '../assets/photos/global_team_illustration.png';
 
 const Home = () => {
   const schema = {
@@ -42,9 +43,8 @@ const Home = () => {
       <Schema data={schema} />
 
       {/* ── HERO ── */}
-      <section style={{ background: 'var(--bg-soft)', paddingTop: '200px', paddingBottom: '120px', borderBottom: '1px solid var(--border)' }}>
+      <section style={{ background: 'var(--bg-soft)', paddingTop: '160px', paddingBottom: '100px', borderBottom: '1px solid var(--border)' }}>
         <div className="container">
-          {/* Centered Content */}
           <div style={{ textAlign: 'center' }} className="animate-fade">
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
               <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#16A34A' }}></div>
@@ -52,36 +52,41 @@ const Home = () => {
                 Gujarat, India — Serving 15+ Countries
               </span>
             </div>
-            <h1 style={{ fontSize: '4.5rem', marginBottom: '1.5rem', lineHeight: '1.1' }}>
+            <h1 style={{ fontSize: '4rem', marginBottom: '1.5rem', lineHeight: '1.1' }}>
               Engineering <span className="text-gradient">Business</span><br />Infrastructure
             </h1>
-            <p style={{ color: 'var(--text-muted)', fontSize: '1.4rem', lineHeight: '1.7', marginBottom: '3rem', maxWidth: '800px', margin: '0 auto' }}>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1.3rem', lineHeight: '1.7', marginBottom: '2.5rem', maxWidth: '800px', margin: '0 auto' }}>
               We build high-performance software and AI systems that empower global enterprises to operate at scale.
             </p>
-            <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '4rem' }}>
-              <Link to="/contact" className="btn btn-primary" style={{ fontSize: '1.1rem', padding: '1rem 2.5rem' }}>
-                Book Free Demo <ArrowRight size={20} />
+            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '3rem' }}>
+              <Link to="/contact" className="btn btn-primary" style={{ padding: '0.8rem 2.5rem' }}>
+                Book Free Demo <ArrowRight size={18} />
               </Link>
-              <Link to="/contact" className="btn btn-secondary" style={{ fontSize: '1.1rem', padding: '1rem 2.5rem' }}>
+              <Link to="/contact" className="btn btn-secondary" style={{ padding: '0.8rem 2.5rem' }}>
                 Get Consultation
               </Link>
             </div>
 
+            {/* Illustration */}
+            <div style={{ maxWidth: '1000px', margin: '0 auto 4rem', borderRadius: '32px', overflow: 'hidden', boxShadow: 'var(--shadow-lg)' }}>
+              <img src={globalTeamIllustration} alt="Global Team Infrastructure" style={{ width: '100%', height: 'auto', display: 'block' }} />
+            </div>
+
             {/* GMB Rating Badge */}
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap', marginBottom: '4rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', background: 'white', padding: '0.75rem 1.5rem', borderRadius: '16px', boxShadow: 'var(--shadow-sm)', border: '1px solid var(--border)' }}>
-                <img src={googleReviewsBadge} alt="Google Reviews 5 Star Rating" style={{ height: '56px', width: 'auto' }} />
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap', marginBottom: '3rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', background: 'white', padding: '0.6rem 1.25rem', borderRadius: '16px', boxShadow: 'var(--shadow-sm)', border: '1px solid var(--border)' }}>
+                <img src={googleReviewsBadge} alt="Google Reviews 5 Star Rating" style={{ height: '48px', width: 'auto' }} />
               </div>
-              <div style={{ color: 'var(--text-muted)', fontSize: '1rem', fontWeight: '600' }}>
+              <div style={{ color: 'var(--text-muted)', fontSize: '0.95rem', fontWeight: '600' }}>
                 40+ Verified Reviews
               </div>
             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '4rem', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '3rem', flexWrap: 'wrap' }}>
               {[['500+', 'Global Clients'], ['15+', 'Countries'], ['4', 'Products']].map(([n, l]) => (
                 <div key={l}>
-                  <div style={{ fontSize: '2.5rem', fontWeight: '900', color: 'var(--primary)' }}>{n}</div>
-                  <div style={{ fontSize: '1rem', color: 'var(--text-muted)', fontWeight: '700' }}>{l}</div>
+                  <div style={{ fontSize: '2rem', fontWeight: '900', color: 'var(--primary)' }}>{n}</div>
+                  <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: '700' }}>{l}</div>
                 </div>
               ))}
             </div>
