@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import webbillLogo from '../../assets/logos/webbill.jpg';
 import webmartLogo from '../../assets/logos/webmart.png';
 import webinvoiceLogo from '../../assets/logos/webinvoice.png';
+import jatasaiLogo from '../../assets/logos/jatasai.png';
 
 const PalanpurPage = () => {
   const products = [
@@ -29,10 +30,23 @@ const PalanpurPage = () => {
       desc: 'The Smart Retail Management System for grocery and supermarts in Palanpur. Integrated inventory and sales tracking.',
       color: '#16A34A',
       link: '/products/webmart'
+    },
+    {
+      name: 'Jatas AI',
+      logo: jatasaiLogo,
+      desc: 'Advanced AI Voice Agent technology for automated admissions and communication, used by leading educational institutions.',
+      color: '#DC2626',
+      link: '/products/jatas-ai'
     }
   ];
 
   const clientReviews = [
+    {
+      product: 'Jatas AI',
+      client: 'Ganpat University',
+      text: "Jatas AI has transformed our communication efficiency. The AI voice agents handle high volumes of inquiries perfectly, making it an essential tool for our institution.",
+      rating: 5
+    },
     {
       product: 'WebBill',
       client: 'Atithi Restaurant',
@@ -115,20 +129,20 @@ const PalanpurPage = () => {
       <section className="section">
         <div className="container">
           <div style={{ marginBottom: '4rem', textAlign: 'center' }}>
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>#1 Billing Software Company in Palanpur</h2>
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>#1 Software Company in Palanpur</h2>
             <p style={{ color: 'var(--text-muted)', fontSize: '1.15rem' }}>Specialized digital tools for the growing Palanpur marketplace.</p>
           </div>
           
-          <div className="grid md-grid-cols-3 gap-8">
+          <div className="grid md-grid-cols-4 gap-6">
             {products.map((p) => (
-              <div key={p.name} className="card" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', borderTop: `5px solid ${p.color}` }}>
-                <div style={{ height: '80px', display: 'flex', alignItems: 'center', background: '#fff', borderRadius: '12px', padding: '1rem', border: '1px solid var(--border)' }}>
+              <div key={p.name} className="card" style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', borderTop: `5px solid ${p.color}`, padding: '2rem' }}>
+                <div style={{ height: '70px', display: 'flex', alignItems: 'center', background: '#fff', borderRadius: '12px', padding: '0.75rem', border: '1px solid var(--border)' }}>
                   <img src={p.logo} alt={p.name} style={{ height: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }} />
                 </div>
-                <h3 style={{ fontSize: '1.5rem', fontWeight: '800' }}>{p.name}</h3>
-                <p style={{ color: 'var(--text-muted)', lineHeight: '1.7', flexGrow: 1 }}>{p.desc}</p>
-                <Link to={p.link} style={{ color: p.color, fontWeight: '700', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  View Full Product <ArrowRight size={18} />
+                <h3 style={{ fontSize: '1.25rem', fontWeight: '800' }}>{p.name}</h3>
+                <p style={{ color: 'var(--text-muted)', lineHeight: '1.6', flexGrow: 1, fontSize: '0.95rem' }}>{p.desc}</p>
+                <Link to={p.link} style={{ color: p.color, fontWeight: '700', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem' }}>
+                  View Full Product <ArrowRight size={16} />
                 </Link>
               </div>
             ))}
@@ -143,7 +157,7 @@ const PalanpurPage = () => {
             <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Success Stories in <span className="text-gradient">Palanpur</span></h2>
             <p style={{ color: 'var(--text-muted)', fontSize: '1.15rem' }}>Real feedback from local businesses powered by our systems.</p>
           </div>
-          <div className="grid md-grid-cols-3 gap-8">
+          <div className="grid md-grid-cols-2 gap-8">
             {clientReviews.map((r) => (
               <div key={r.client} className="card" style={{ position: 'relative', overflow: 'hidden' }}>
                 <div style={{ position: 'absolute', top: '-10px', right: '-10px', opacity: 0.05 }}>
